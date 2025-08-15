@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PakWheels Clone</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+    }
+
+    /* Navbar background */
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: linear-gradient(to bottom, #001b33, #004080);
+        padding: 10px 40px;
+    }
+
+    /* Logo */
+    .navbar img {
+        height: 40px;
+    }
+
+    /* Center tabs */
+    .nav-links {
+        display: flex;
+        gap: 15px;
+    }
+
+    .nav-item, .nav-static {
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 15px;
+        border-radius: 4px;
+    }
+
+    /* Hover effect ONLY for interactive tabs */
+    .nav-item:hover {
+        background-color: white;
+        color: red;
+    }
+
+    /* Non-interactive tabs */
+    .nav-static {
+        cursor: default;
+    }
+
+    /* Right side */
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nav-right a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+    .post-ad-btn {
+        background: red;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .post-ad-btn:hover {
+        background: darkred;
+    }
+
+    /* Hero section */
+    .hero {
+        background: linear-gradient(to bottom, #001b33, #004080);
+        color: white;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    /* Search bar container */
+    .search-bar {
+        display: flex;
+        justify-content: center;
+        background: white;
+        max-width: 850px;
+        margin: auto;
+    }
+
+    select, input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    select {
+        min-width: 150px;
+    }
+
+    .search-bar button{
+        color: white;
+        background-color: #0de04d;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .search-bar button:hover {
+        background-color: #0c8530;
+        
+    }
+    /* ---------------- Sell section ---------------- */
+  .sell-wrap{
+    max-width:var(--max-width);
+    margin: 28px auto;
+    padding: 0 20px;
+  }
+
+  .sell-title{
+    text-align:center;
+    font-size:22px;
+    color:#333;
+    margin: 18px 0 18px;
+    font-weight:600;
+  }
+
+  /* Card that contains the two options and vertical divider */
+  .sell-card{
+    background:#fff;
+    border:1px solid var(--card-border);
+    border-radius:4px;
+    overflow:visible;
+    display:flex;
+    align-items:stretch;
+    justify-content:space-between;
+    box-shadow: 0 0 0 rgba(0,0,0,0.02);
+  }
+
+  /* Left/Right option columns */
+  .option{
+    padding:28px 36px;
+    flex:1 1 420px;
+    min-width:260px;
+  }
+
+  .option h3{
+    margin:0 0 14px;
+    color:#21446a;
+    font-size:18px;
+    font-weight:700;
+  }
+
+  .feature-list{
+    list-style:none;
+    padding:0;
+    margin:0 0 22px 0;
+  }
+  .feature-list li{
+    margin:9px 0;
+    font-size:14px;
+    color:#444;
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+  }
+  /* check glyph */
+  .feature-list li .tick{
+    color:var(--check-green);
+    font-weight:700;
+    margin-top:1px;
+    flex:0 0 16px;
+    font-size:16px;
+  }
+
+  /* CTA buttons */
+  .btn-red{
+    background:var(--accent-red);
+    color:#fff;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:600;
+  }
+  .btn-red:hover{ background:var(--accent-red-dark); }
+
+  .btn-blue{
+    background:var(--accent-blue);
+    color:#fff;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:600;
+  }
+  .btn-blue:hover{ background:#386fa8; }
+
+  /* Vertical divider + OR circle */
+  .divider-area{
+    width:110px;               /* spacing around the divider & OR */
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+  }
+
+  .divider-line{
+    width:1px;
+    background:var(--card-border);
+    height:70%;
+  }
+
+  .or-circle{
+    position:absolute;
+    background:#fff;
+    border:1px solid var(--card-border);
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    color:#777;
+    box-shadow:0 2px 6px rgba(0,0,0,0.03);
+  }
+
+  /* Responsive tweaks */
+  @media (max-width:980px){
+    .center-nav{ display:none; } /* keep layout simple on small screens */
+    .sell-card{ flex-direction:column; gap:12px; }
+    .divider-area{ width:100%; height:0; padding:0; }
+    .divider-line{ display:none; }
+    .or-circle{ position:relative; margin:0 auto 6px; }
+    .topbar .container{ padding:10px 12px; }
+  }
+</style>
+</head>
+<body>
+<div class ="bodywrapper"></div>
+<!-- Navbar -->
+<div class="navbar">
+    <!-- Logo -->
+    <img src="./new-pw-logo-white-618259573a0604d3ae593b46213e2ab390bcc33336d4bdc3486405c7351ded13.svg" alt="PakWheels Logo">
+
+    <!-- Tabs -->
+    <div class="nav-links">
+        <a href="#" class="nav-item">Used Cars</a>
+        <a href="#" class="nav-item">New Cars</a>
+        <a href="#" class="nav-item">Bikes</a>
+        <a href="#" class="nav-item">Auto Store</a>
+        <a href="#" class="nav-item">Videos</a>
+        <a class="nav-static">Forums</a>
+        <a class="nav-static">Blog</a>
+        <a class="nav-static">More</a>
+    </div>
+
+    <!-- Right section -->
+    <div class="nav-right">
+        <a href="#">Sign Up</a>
+        <a href="#">Sign In</a>
+        <button class="post-ad-btn">Post an Ad</button>
+    </div>
+</div>
+
+<!-- Hero Section -->
+<div class="hero">
+    <h1>Find Used Cars in Pakistan</h1>
+    <p>With thousands of cars, we have just the right one for you</p>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <select>
+            <option>Used Cars</option>
+            <option>New Cars</option>
+        </select>
+        <select>
+            <option>Select Make</option>
+        </select>
+        <select>
+            <option>Select Model</option>
+        </select>
+        <select>
+            <option>Select City</option>
+        </select>
+        <input type="text" placeholder="Search by keyword...">
+        <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6" height="40px" width="50px">
+  <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z" clip-rule="evenodd"/>
+</svg></button>
+    </div>
+</div>
+<!-- SELL SECTION (centered) -->
+  <div class="sell-wrap">
+    <div class="sell-title">Sell Your Car on PakWheels and Get the Best Price</div>
+
+    <div class="sell-card" role="region" aria-label="Sell options">
+      <!-- Left -->
+      <div class="option">
+        <h3>Sell It Myself!</h3>
+        <ul class="feature-list">
+          <li><span class="tick">✔</span><span>Post an ad in 2 minutes</span></li>
+          <li><span class="tick">✔</span><span>20 million users</span></li>
+          <li><span class="tick">✔</span><span>Connect directly with buyers</span></li>
+        </ul>
+        <button class="btn-red">Post Your Ad</button>
+      </div>
+
+      <!-- Divider with OR circle -->
+      <div class="divider-area" aria-hidden="true">
+        <div class="divider-line"></div>
+        <div class="or-circle">OR</div>
+      </div>
+
+      <!-- Right -->
+      <div class="option">
+        <h3>Sell It For Me</h3>
+        <ul class="feature-list">
+          <li><span class="tick">✔</span><span>Sell your car without hassle</span></li>
+          <li><span class="tick">✔</span><span>Free Inspection &amp; Featured ad</span></li>
+          <li><span class="tick">✔</span><span>Maximize offer with sales agent</span></li>
+        </ul>
+        <button class="btn-blue">Help Me Sell My Car!</button>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
