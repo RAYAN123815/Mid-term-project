@@ -229,6 +229,110 @@
     .footer input{
     height: 38px;
 }
+/* Used Cars Section */
+.used-cars {
+  background: #1e3a78; /* Dark Blue */
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.used-cars h2 {
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+.used-cars p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #ddd;
+}
+
+.search-box {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  display: inline-flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.search-box input,
+.search-box select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  min-width: 180px;
+}
+
+.search-btn {
+  background: #28a745; /* Green */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  background: #218838;
+}
+
+.more-options {
+  display: block;
+  margin-top: 10px;
+  color: #cce1ff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 40px 20px;
+  background: #f5f5f5;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.feature {
+  max-width: 200px;
+}
+
+.feature img {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.feature h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.feature p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Sell Button */
+.sell-btn {
+  background: #c9302c; /* Red */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sell-btn:hover {
+  background: #a52a2a;
+}
     </style>
 </head>
 <body>
@@ -257,6 +361,56 @@
         <button class="post-ad-btn">Post an Ad</button>
     </div>
     </div>
+    <!-- Section -->
+  <section class="used-cars">
+    <div class="container">
+      <h2>Find Used Cars in Pakistan</h2>
+      <p>With thousands of cars, we have just the right one for you</p>
+
+      <!-- Search Box -->
+      <div class="search-box">
+        <input type="text" placeholder="Car Make or Model">
+        <select>
+          <option>All Cities</option>
+          <option>Lahore</option>
+          <option>Karachi</option>
+          <option>Islamabad</option>
+        </select>
+        <select>
+          <option>Price Range</option>
+          <option>Below 10 Lac</option>
+          <option>10 - 20 Lac</option>
+          <option>20 - 30 Lac</option>
+        </select>
+        <button class="search-btn">Search</button>
+      </div>
+
+      <a href="#" class="more-options">More Search Options ▼</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="feature">
+      <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="ads icon">
+      <h3>Free Ad</h3>
+      <p>Post your car's ad for free in 30 seconds.</p>
+    </div>
+    <div class="feature">
+      <img src="https://cdn-icons-png.flaticon.com/512/1256/1256650.png" alt="buyers icon">
+      <h3>Genuine Buyers</h3>
+      <p>Get authentic offers from verified buyers.</p>
+    </div>
+    <div class="feature">
+      <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png" alt="sell icon">
+      <h3>Sell Faster</h3>
+      <p>Sell your car faster than others at a better price.</p>
+    </div>
+    <div class="feature sell-btn-box">
+      <button class="sell-btn">Sell Your Car</button>
+    </div>
+  </section>
+
     <section class="full-width-section">
         <div class="container"><div class="x-det">
                 <div><span><h2>Featured Used Cars for Sale</h2></span></div>
