@@ -105,7 +105,7 @@
         display: flex;
         justify-content: center;
         background: white;
-        max-width: 850px;
+        max-width: 800px;
         margin: auto;
     }
 
@@ -231,7 +231,7 @@
     .buc{
         box-sizing: border-box;
         padding: 30px 150px;
-        background-color: #ccc;
+        background-color: #f0f0f0;
     }
     .buc-tabs{
         display: flex;
@@ -288,28 +288,6 @@
     font-weight: bolder;
     box-shadow:  3px 3px 10px #333;
 }
-.ark1{
-    padding-left: 5px;
-    float: right;
-    background-color: aliceblue;
-    height:20px ;
-    width:25px ;
-    border-radius:10px;
-}
-.ark1:hover{
-    background-color: #0088ff;
-}
-.ark2{
-    padding-left: 5px;
-    float: left;
-    background-color: aliceblue;
-    height:20px ;
-    width:25px ;
-    border-radius:10px;
-}
-.ark2:hover{
-    background-color: #0088ff;
-}
 .PK-offering{
     margin: 20px 150px;
     display:flex ;
@@ -342,6 +320,124 @@
     border: 1px solid rgb(206, 206, 206);
     height: 106px;
     width: 490px;
+}
+.MB-PK{
+    background-color: #e0e0e0;
+    padding: 20px 50px;
+}
+.MB-PK1{
+    background-color: #ffffff;
+    padding: 20px 50px;
+}
+.x-det{
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+}
+.x-det div{
+    padding: 20px;
+}
+.x-det p{
+    color: #0088ff;
+}
+.MBPK{ 
+    display: flex;
+    margin: 20px;
+    justify-content:space-between ;
+}
+.MBPK1{ 
+    display: flex;
+    margin: 20px;
+    justify-content:space-between ;
+}
+.MBPK div{
+    background-color: aliceblue;
+    height: 250px;
+    border: 1px solid #e0e0e0 ;
+}
+.MBPK1 div{
+    background-color: aliceblue;
+    height: 250px;
+    border: 1px solid #e0e0e0 ;
+}
+.section{
+    padding: 20px;
+}
+/* Section */
+.brands {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.brands h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+/* Grid */
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Brand card */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 10px;
+  transition: transform 0.2s ease;
+}
+
+.brand img:hover {
+  transform: scale(1.1);
+}
+
+.brand p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #003366;
+  font-weight: 500;
+}
+.footer{
+    padding:30px;
+    background-color: #333;
+}
+.first-row{ 
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    }
+.second-row{ 
+    padding-top: 10px;
+    color: aliceblue;
+    display: flex;
+    gap: 150px
+    }
+.Newsteller button{
+    height: 38px;
+    border: none;
+    background-color: #0de04d;
+    color: aliceblue
+}
+
+.Newsteller button:hover{ 
+    background-color: #034918;
+    }
+.footer input{
+    height: 38px;
 }
 </style>
 </head>
@@ -391,6 +487,9 @@
         </select>
         <select>
             <option>Select City</option>
+            <option>Lahore</option>
+          <option>Karachi</option>
+          <option>Islamabad</option>
         </select>
         <input type="text" placeholder="Search by keyword...">
         <button><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6" height="40px" width="50px">
@@ -429,7 +528,7 @@
     </div>
   </div>
     <div class="first-img">
-    <img src="./images/18358204047996557581.jpeg" alt="">
+    <img src="./images/18358204047996557581.jpeg" alt="" style="margin-left:150px;">
     </div>
     <div class="buc">
         <span><h1>Browse Used Cars</h1></span>
@@ -450,8 +549,7 @@
         <div class="type">Jeep</div>
         <div class="type">Hyprid cars</div>
     </div>
-    <div class="ark2">◀</div>
-    <div class="ark1">▶</div><br>
+    
     <div class="c-type-row2">
         <div class="type">Diesel Cars</div>
         <div class="type">2 Door</div>
@@ -500,18 +598,528 @@
     </section>
     <section>
         <div class="MB-PK">
-            <span><h2>Managed by PakWheels</h2></span>
-            <p>View all managed by PakWheels Cars</p>
-            <div class="MBPK">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+            <div class="x-det">
+                <div><span><h2>Managed by PakWheels</h2></span></div>
+                <div><p>View all managed by PakWheels Cars</p></div>
             </div>
+            
+            <div class="MBPK">
+                <div><img src="./images/download.jpeg" height="170px" width="250px"><p style="font-weight: bold;">Toyota Corolla 2015</p><p style="color: rgb(71, 253, 47);">PKR 3,750,000</p><p style="color: rgb(173, 173, 173);">Faisalabad</p></div>
+                <div><img src="./images/download.jpeg" height="170px" width="250px"><p style="font-weight: bold;">Daihatsu Mira 2015</p><p style="color: rgb(71, 253, 47);">PKR 2,450,000</p><p style="color: rgb(173, 173, 173);">Karachi</p></div>
+                <div><img src="./images/download.jpeg" height="170px" width="250px"><p style="font-weight: bold;">Honda City 2021</p><p style="color: rgb(71, 253, 47);">PKR 4,175,000</p><p style="color: rgb(173, 173, 173);">Karachi</p></div>
+                <div><img src="./images/download.jpeg" height="170px" width="250px"><p style="font-weight: bold;">KIA Sportage 2021</p><p style="color: rgb(71, 253, 47);">PKR 7,700,000</p><p style="color: rgb(173, 173, 173);">Lahore</p></div>
+                
+            </div>
+            
+            </div>
+            </section>
+            <section>
+            <div class="MB-PK1">
+                <div class="x-det">
+                <div><span><h2>Featured Used Cars for Sale</h2></span></div>
+                <div><p>View all managed by PakWheels Cars</p></div>
+            </div>
+                <div class="MBPK1">
+                <div><img src="./images/download.jpeg" height="170px" width="250px"><p style="font-weight: bold;">Honda City 2021</p><p style="color: rgb(71, 253, 47);">PKR 4,175,000</p><p style="color: rgb(173, 173, 173);">Faisalabad</p></div>
+                <div><img src="./images/download.jpeg" height="170px" width="250px"><p style="font-weight: bold;">Toyota Prado 2020</p><p style="color: rgb(71, 253, 47);">PKR 29,700,000</p><p style="color: rgb(173, 173, 173);">Karachi</p></div>
+                <div><img src="./images/download.jpeg" height="170px" width="250px"><p style="font-weight: bold;">Changan Alsvin 2021</p><p style="color: rgb(71, 253, 47);">PKR 3,175,000</p><p style="color: rgb(173, 173, 173);">Karachi</p></div>
+                <div><img src="./images/download.jpeg" height="170px" width="250px"><p style="font-weight: bold;">KIA Sportage 2021</p><p style="color: rgb(71, 253, 47);">PKR 7,700,000</p><p style="color: rgb(173, 173, 173);">Lahore</p></div>
+                
+            </div>
+            
+            </div>
+            </section>
+            <section>
+        <div class="MB-PK">
+            <div class="x-det">
+                <div><span><h2>Managed by PakWheels</h2></span></div>
+                <div><p>View all managed by PakWheels Cars</p></div>
+            </div>
+            
+            <div class="MBPK">
+                <div><img src="./images/download.jpeg" height="170px" width="250px"><p style="font-weight: bold;">Toyota Corolla</p><p style="color: rgb(71, 253, 47);">PKR 61.0 - 77.1 lacs</p><p style="color: rgb(173, 173, 173);">Faisalabad</p></div>
+                <div><img src="./images/download.jpeg" height="170px" width="250px"><p style="font-weight: bold;">Suzuki Alto</p><p style="color: rgb(71, 253, 47);">PKR 29.9 - 33.3 lacs</p><p style="color: rgb(173, 173, 173);">Karachi</p></div>
+                <div><img src="./images/download.jpeg" height="170px" width="250px"><p style="font-weight: bold;">Honda City</p><p style="color: rgb(71, 253, 47);">PKR 47.0 - 59.7 lacs</p><p style="color: rgb(173, 173, 173);">Karachi</p></div>
+                <div><img src="./images/download.jpeg" height="170px" width="250px"><p style="font-weight: bold;">Honda Civic</p><p style="color: rgb(71, 253, 47);">PKR 88.3 lacs - 1.01 crore</p><p style="color: rgb(173, 173, 173);">Lahore</p></div>
+                
+            </div>
+            </div>
+            </section>
+            <section class="brands">
+    <h2>New Cars by Make</h2>
+    <div class="brands-grid">
+      <!-- Each brand -->
+      <div class="brand">
+        <img src="./images/suzuki.png" alt="Suzuki">
+        <p>Suzuki</p>
+      </div>
+      <div class="brand">
+        <img src="./images/toyota.png" alt="Toyota">
+        <p>Toyota</p>
+      </div>
+      <div class="brand">
+        <img src="./images/honada.png" alt="Honda">
+        <p>Honda</p>
+      </div>
+      <div class="brand">
+        <img src="./images/KIA.png" alt="KIA">
+        <p>KIA</p>
+      </div>
+      <div class="brand">
+        <img src="./images/hyndai.png" alt="Hyundai">
+        <p>Hyundai</p>
+      </div>
+      <div class="brand">
+        <img src="./images/MG.png" alt="MG">
+        <p>MG</p>
+      </div>
+            <div class="brand">
+        <img src="./images/BMW.png" alt="BMW">
+        <p>BMW</p>
+      </div>
+            <div class="brand">
+        <img src="./images/Audi.png" alt="Audi">
+        <p>Audi</p>
+      </div>
+      <!-- Add more brands here as needed -->
+    </div>
+    <div class="brands-grid">
+      <!-- Each brand -->
+      <div class="brand">
+        <img src="./images/suzuki.png" alt="Suzuki">
+        <p>Suzuki</p>
+      </div>
+      <div class="brand">
+        <img src="./images/toyota.png" alt="Toyota">
+        <p>Toyota</p>
+      </div>
+      <div class="brand">
+        <img src="./images/honada.png" alt="Honda">
+        <p>Honda</p>
+      </div>
+      <div class="brand">
+        <img src="./images/KIA.png" alt="KIA">
+        <p>KIA</p>
+      </div>
+      <div class="brand">
+        <img src="./images/hyndai.png" alt="Hyundai">
+        <p>Hyundai</p>
+      </div>
+      <div class="brand">
+        <img src="./images/MG.png" alt="MG">
+        <p>MG</p>
+      </div>
+            <div class="brand">
+        <img src="./images/BMW.png" alt="BMW">
+        <p>BMW</p>
+      </div>
+            <div class="brand">
+        <img src="./images/Audi.png" alt="Audi">
+        <p>Audi</p>
+      </div>
+      <!-- Add more brands here as needed -->
+    </div>
+    <div class="brands-grid">
+      <!-- Each brand -->
+      <div class="brand">
+        <img src="./images/suzuki.png" alt="Suzuki">
+        <p>Suzuki</p>
+      </div>
+      <div class="brand">
+        <img src="./images/toyota.png" alt="Toyota">
+        <p>Toyota</p>
+      </div>
+      <div class="brand">
+        <img src="./images/honada.png" alt="Honda">
+        <p>Honda</p>
+      </div>
+      <div class="brand">
+        <img src="./images/KIA.png" alt="KIA">
+        <p>KIA</p>
+      </div>
+      <div class="brand">
+        <img src="./images/hyndai.png" alt="Hyundai">
+        <p>Hyundai</p>
+      </div>
+      <div class="brand">
+        <img src="./images/MG.png" alt="MG">
+        <p>MG</p>
+      </div>
+            <div class="brand">
+        <img src="./images/BMW.png" alt="BMW">
+        <p>BMW</p>
+      </div>
+            <div class="brand">
+        <img src="./images/Audi.png" alt="Audi">
+        <p>Audi</p>
+      </div>
+      <!-- Add more brands here as needed -->
+    </div>
+    <div class="brands-grid">
+      <!-- Each brand -->
+      <div class="brand">
+        <img src="./images/suzuki.png" alt="Suzuki">
+        <p>Suzuki</p>
+      </div>
+      <div class="brand">
+        <img src="./images/toyota.png" alt="Toyota">
+        <p>Toyota</p>
+      </div>
+      <div class="brand">
+        <img src="./images/honada.png" alt="Honda">
+        <p>Honda</p>
+      </div>
+      <div class="brand">
+        <img src="./images/KIA.png" alt="KIA">
+        <p>KIA</p>
+      </div>
+      <div class="brand">
+        <img src="./images/hyndai.png" alt="Hyundai">
+        <p>Hyundai</p>
+      </div>
+      <div class="brand">
+        <img src="./images/MG.png" alt="MG">
+        <p>MG</p>
+      </div>
+            <div class="brand">
+        <img src="./images/BMW.png" alt="BMW">
+        <p>BMW</p>
+      </div>
+            <div class="brand">
+        <img src="./images/Audi.png" alt="Audi">
+        <p>Audi</p>
+      </div>
+      <!-- Add more brands here as needed -->
+    </div>
+    <div class="brands-grid">
+      <!-- Each brand -->
+      <div class="brand">
+        <img src="./images/suzuki.png" alt="Suzuki">
+        <p>Suzuki</p>
+      </div>
+      <div class="brand">
+        <img src="./images/toyota.png" alt="Toyota">
+        <p>Toyota</p>
+      </div>
+      <div class="brand">
+        <img src="./images/honada.png" alt="Honda">
+        <p>Honda</p>
+      </div>
+      <div class="brand">
+        <img src="./images/KIA.png" alt="KIA">
+        <p>KIA</p>
+      </div>
+      <div class="brand">
+        <img src="./images/hyndai.png" alt="Hyundai">
+        <p>Hyundai</p>
+      </div>
+      <div class="brand">
+        <img src="./images/MG.png" alt="MG">
+        <p>MG</p>
+      </div>
+            <div class="brand">
+        <img src="./images/BMW.png" alt="BMW">
+        <p>BMW</p>
+      </div>
+            <div class="brand">
+        <img src="./images/Audi.png" alt="Audi">
+        <p>Audi</p>
+      </div>
+      <!-- Add more brands here as needed -->
+    </div>
+  </section>
+  <section class="brands" style="background-color: #ccc;">
+  <h2>New Bikes by Make</h2>
+  <div class="brands-grid" >
+
+    <div class="brand">
+      <img src="images/honda bike.png" alt="Honda">
+      <p>Honda</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/yamaha bike.png" alt="Yamaha">
+      <p>Yamaha</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/suzuki.png" alt="Suzuki">
+      <p>Suzuki</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/kavasaki.png" alt="Kawasaki">
+      <p>Kawasaki</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/ducati.png" alt="Ducati">
+      <p>Ducati</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/harley daidson.png" alt="Harley-Davidson">
+      <p>Harley-Davidson</p>
+    </div>
+
+    <div class="brand">
+  <img src="images/BMW motor.png" alt="BMW Motorrad">
+  <p>BMW Motorrad</p>
+</div>
+
+<div class="brand">
+  <img src="images/KTM.png" alt="KTM">
+  <p>KTM</p>
+</div>
+</div>
+
+<div class="brands-grid">
+
+    <div class="brand">
+      <img src="images/honda bike.png" alt="Honda">
+      <p>Honda</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/yamaha bike.png" alt="Yamaha">
+      <p>Yamaha</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/suzuki.png" alt="Suzuki">
+      <p>Suzuki</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/kavasaki.png" alt="Kawasaki">
+      <p>Kawasaki</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/ducati.png" alt="Ducati">
+      <p>Ducati</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/harley daidson.png" alt="Harley-Davidson">
+      <p>Harley-Davidson</p>
+    </div>
+
+    <div class="brand">
+  <img src="images/BMW motor.png" alt="BMW Motorrad">
+  <p>BMW Motorrad</p>
+</div>
+
+<div class="brand">
+  <img src="images/KTM.png" alt="KTM">
+  <p>KTM</p>
+</div>
+</div>
+
+<div class="brands-grid">
+
+    <div class="brand">
+      <img src="images/honda bike.png" alt="Honda">
+      <p>Honda</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/yamaha bike.png" alt="Yamaha">
+      <p>Yamaha</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/suzuki.png" alt="Suzuki">
+      <p>Suzuki</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/kavasaki.png" alt="Kawasaki">
+      <p>Kawasaki</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/ducati.png" alt="Ducati">
+      <p>Ducati</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/harley daidson.png" alt="Harley-Davidson">
+      <p>Harley-Davidson</p>
+    </div>
+
+    <div class="brand">
+  <img src="images/BMW motor.png" alt="BMW Motorrad">
+  <p>BMW Motorrad</p>
+</div>
+
+<div class="brand">
+  <img src="images/KTM.png" alt="KTM">
+  <p>KTM</p>
+</div>
+</div>
+<div class="brands-grid">
+
+    <div class="brand">
+      <img src="images/honda bike.png" alt="Honda">
+      <p>Honda</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/yamaha bike.png" alt="Yamaha">
+      <p>Yamaha</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/suzuki.png" alt="Suzuki">
+      <p>Suzuki</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/kavasaki.png" alt="Kawasaki">
+      <p>Kawasaki</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/ducati.png" alt="Ducati">
+      <p>Ducati</p>
+    </div>
+
+    <div class="brand">
+      <img src="images/harley daidson.png" alt="Harley-Davidson">
+      <p>Harley-Davidson</p>
+    </div>
+
+    <div class="brand">
+  <img src="images/BMW motor.png" alt="BMW Motorrad">
+  <p>BMW Motorrad</p>
+</div>
+
+<div class="brand">
+  <img src="images/KTM.png" alt="KTM">
+  <p>KTM</p>
+</div>
+</div>
+</section>
+<section class="footer">
+
+
+<div>
+        <div class=" first-row">
+    <div>
+    <table>
+    <tr><th>Cars By Make</th></tr>
+    <tr><td>Toyota Cars for Sale</td></tr>
+    <tr><td>Suzuki Cars for Sale</td></tr>
+    <tr><td>Honda Cars for Sale</td></tr>
+    <tr><td>Daihatsu Cars for Sale</td></tr>
+    <tr><td>Mitsubishi Cars for Sale</td></tr>
+    <tr><td>Nissan Cars for Sale</td></tr>
+    <tr><td>Mercedes Cars for Sale</td></tr>
+    <tr><td>Hyundai Cars for Sale</td></tr>
+    <tr><td>BMW Cars for Sale</td></tr>
+    </table>
+    </div>
+   
+    <div>
+    <table>
+    <tr><th> Cars By City</th></tr>
+    <tr><td>Cars in Karachi</td></tr>
+    <tr><td>Cars in Lahore</td></tr>
+    <tr><td>Cars in Islamabad</td></tr>
+    <tr><td>Cars in Rawalpindi</td></tr>
+    <tr><td>Cars in Peshawar</td></tr>
+    <tr><td>Cars in Faisalabad</td></tr>
+    <tr><td>Cars in Multan</td></tr>
+    <tr><td>Cars in Gujranwala</td></tr>
+    <tr><td>Cars in Sialkot</td></tr>
+    </table>
+</div>
+
+    <div>
+    <table>
+    <tr><th>Explore PakWheels</th></tr>
+    <tr><td>Used Cars</td></tr>
+    <tr><td>Used Bikes</td></tr>
+    <tr><td>New Cars</td></tr>
+    <tr><td>Auto Parts & Accessories</td></tr>
+    <tr><td>Cool Rides</td></tr>
+    <tr><td>Forums</td></tr>
+    <tr><td>Autoshow</td></tr>
+    <tr><td>Sitemap</td></tr>
+    </table>
+    </div>
+    
+    <div>
+    <table>
+    <tr><th>PakWheels.com</th></tr>
+    <tr><td>About PakWheels.com</td></tr>
+    <tr><td>Our Products</td></tr>
+    <tr><td>Advertise With Us</td></tr>
+    <tr><td>How To Pay</td></tr>
+    <tr><td>FAQs</td></tr>
+    <tr><td>Refunds & Returns</td></tr>
+    <tr><td>Careers</td></tr>
+    <tr><td>Contact Us</td></tr>
+    </table>
+    </div>
+    <div>
+    <div>
+    <table>
+    <tr><th>Sell On PakWheels</th></tr> 
+    <tr><td>Sell Your Car</td></tr>
+    <tr><td>Sell Your Bike</td></tr>
+    <tr><td>Sell Accessory</td></tr>
+    </table>
+    </div><br><br>
+    <div class="Newsteller">
+        <p>Subscribe to our Newsletter</p>
+        <input type="email" placeholder="name@gmail.com"><button>Subscribe</button>
+    </div>
+    </div>
         </div>
-
-
-
+    <div class="second-row">
+        <div>
+            <table>
+                <tr><th>Cars by Category</th></tr>
+                <tr><td>Jeep</td></tr>
+                <tr><td>Japanese Cars</td></tr>
+                <tr><td>Imported Cars</td></tr>
+                <tr><td>Automatic Cars</td></tr>
+                <tr><td>Low Priced Cars</td></tr>
+                <tr><td>4x4 Cars</td></tr>
+                <tr><td>660cc Cars</td></tr>
+                <tr><td>1000cc Cars</td></tr>
+            </table>
+        </div>
+        <div>
+            <table>
+                <tr><th>Cars by Body Type</th></tr>
+                <tr><td>Crossover</td></tr>
+                <tr><td>Hatchback</td></tr>
+                <tr><td>Micro Van</td></tr>
+                <tr><td>Mini Van</td></tr>
+                <tr><td>Pick Up</td></tr>
+                <tr><td>Sedan</td></tr>
+                <tr><td>SUV</td></tr>
+                <tr><td>Van</td></tr>
+            </table>
+        </div>
+        <div>
+            <table>
+                <tr><th>Cars by Color</th></tr>
+                <tr><td>Black Cars</td></tr>
+                <tr><td>Blue Cars</td></tr>
+                <tr><td>Gold Cars</td></tr>
+                <tr><td>Green Cars</td></tr>
+                <tr><td>Grey Cars</td></tr>
+                <tr><td>Red Cars</td></tr>
+                <tr><td>Silver Cars</td></tr>
+                <tr><td>White Cars</td></tr>
+            </table>
+        </div>
+    </div>
+    </div>
     </section>
 </div>
 
