@@ -5,11 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PakWheels Clone</title>
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f5f5f5;
-    }
+    /* Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+    .bodywrapper {
+    height: auto;
+        }
 
     /* Navbar background */
     .navbar {
@@ -127,143 +132,229 @@
         background-color: #0c8530;
         
     }
-    /* ---------------- Sell section ---------------- */
-  .sell-wrap{
-    max-width:var(--max-width);
-    margin: 28px auto;
-    padding: 0 20px;
-  }
+    .section-container {
+      max-width: 1100px;
+      margin: 50px auto;
+      text-align: center;
+    }
 
-  .sell-title{
-    text-align:center;
-    font-size:22px;
-    color:#333;
-    margin: 18px 0 18px;
-    font-weight:600;
-  }
+    .section-container h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: #333;
+    }
 
-  /* Card that contains the two options and vertical divider */
-  .sell-card{
-    background:#fff;
-    border:1px solid var(--card-border);
-    border-radius:4px;
-    overflow:visible;
-    display:flex;
-    align-items:stretch;
-    justify-content:space-between;
-    box-shadow: 0 0 0 rgba(0,0,0,0.02);
-  }
+    .cards {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #ddd;
+      padding: 30px;
+      border-radius: 4px;
+    }
 
-  /* Left/Right option columns */
-  .option{
-    padding:28px 36px;
-    flex:1 1 420px;
-    min-width:260px;
-  }
+    .card {
+      flex: 1;
+      padding: 20px;
+    }
 
-  .option h3{
-    margin:0 0 14px;
-    color:#21446a;
-    font-size:18px;
-    font-weight:700;
-  }
+    .card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 15px;
+    }
 
-  .feature-list{
-    list-style:none;
-    padding:0;
-    margin:0 0 22px 0;
-  }
-  .feature-list li{
-    margin:9px 0;
-    font-size:14px;
-    color:#444;
-    display:flex;
-    align-items:flex-start;
-    gap:10px;
-  }
-  /* check glyph */
-  .feature-list li .tick{
-    color:var(--check-green);
-    font-weight:700;
-    margin-top:1px;
-    flex:0 0 16px;
-    font-size:16px;
-  }
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+      text-align: left;
+    }
 
-  /* CTA buttons */
-  .btn-red{
-    background:var(--accent-red);
-    color:#fff;
-    border:none;
-    padding:12px 20px;
-    border-radius:6px;
-    cursor:pointer;
-    font-weight:600;
-  }
-  .btn-red:hover{ background:var(--accent-red-dark); }
+    .card ul li {
+      margin-bottom: 10px;
+      font-size: 14px;
+      color: #444;
+      position: relative;
+      padding-left: 25px;
+    }
 
-  .btn-blue{
-    background:var(--accent-blue);
-    color:#fff;
-    border:none;
-    padding:12px 20px;
-    border-radius:6px;
-    cursor:pointer;
-    font-weight:600;
-  }
-  .btn-blue:hover{ background:#386fa8; }
+    .card ul li::before {
+      content: "✓";
+      color: green;
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
 
-  /* Vertical divider + OR circle */
-  .divider-area{
-    width:110px;               /* spacing around the divider & OR */
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
-  }
+    .btn-red {
+      background-color: #d9534f;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
 
-  .divider-line{
-    width:1px;
-    background:var(--card-border);
-    height:70%;
-  }
+    .btn-blue {
+      background-color: #337ab7;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
 
-  .or-circle{
-    position:absolute;
-    background:#fff;
-    border:1px solid var(--card-border);
-    width:56px;
-    height:56px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:700;
-    color:#777;
-    box-shadow:0 2px 6px rgba(0,0,0,0.03);
-  }
+    .divider {
+      padding: 0 20px;
+      color: #888;
+      font-weight: bold;
+    }
 
-  /* Responsive tweaks */
-  @media (max-width:980px){
-    .center-nav{ display:none; } /* keep layout simple on small screens */
-    .sell-card{ flex-direction:column; gap:12px; }
-    .divider-area{ width:100%; height:0; padding:0; }
-    .divider-line{ display:none; }
-    .or-circle{ position:relative; margin:0 auto 6px; }
-    .topbar .container{ padding:10px 12px; }
-  }
+    @media (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+      }
+      .divider {
+        margin: 20px 0;
+      }
+    }
+    .first img{
+        height: 300px;
+        width: 800px;
+        justify-content: center;
+    }
+    .buc{
+        box-sizing: border-box;
+        padding: 30px 150px;
+        background-color: #ccc;
+    }
+    .buc-tabs{
+        display: flex;
+        border-bottom:1px solid gray;
+    }
+    .buc-tabs div{
+    padding: 30px ;
+}
+.buc-tabs button{
+    font-size: 20px;
+    background: #ccc;
+    border: none;
+}
+.buc-tabs button:hover{
+    font-weight: bolder;
+    
+}
+.c-type-row1{
+    display: flex;
+    box-sizing: border-box;
+}
+.c-type-row1 div{
+    font-size: 20px;
+    margin: 20px;
+    padding: 30px;
+    border: 1px solid gray;
+    background-color: aliceblue;
+    height:100px ;
+    width:400px;
+    border-radius: 5px;
+
+}
+.c-type-row1 div:hover{
+    font-weight: bolder;
+    box-shadow:  3px 3px 10px #333;
+}
+.c-type-row2{
+    display: flex;
+    box-sizing: border-box;
+}
+.c-type-row2 div{
+    font-size: 20px;
+    margin: 20px;
+    padding: 30px;
+    border: 1px solid gray;
+    background-color: aliceblue;
+    height:100px ;
+    width:400px;
+    border-radius: 5px;
+    
+
+}
+.c-type-row2 div:hover{
+    font-weight: bolder;
+    box-shadow:  3px 3px 10px #333;
+}
+.ark1{
+    padding-left: 5px;
+    float: right;
+    background-color: aliceblue;
+    height:20px ;
+    width:25px ;
+    border-radius:10px;
+}
+.ark1:hover{
+    background-color: #0088ff;
+}
+.ark2{
+    padding-left: 5px;
+    float: left;
+    background-color: aliceblue;
+    height:20px ;
+    width:25px ;
+    border-radius:10px;
+}
+.ark2:hover{
+    background-color: #0088ff;
+}
+.PK-offering{
+    margin: 20px 150px;
+    display:flex ;
+    justify-content: space-between;
+}
+.first-column div{
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid rgb(206, 206, 206);
+    height: 106px;
+    width: 490px;
+}
+.first-column div:hover{
+    box-shadow: 3px 3px 6px gray ;
+}
+.second-column div:hover{
+    box-shadow: 3px 3px 6px gray ;}
+.first-column h3:hover{
+    color: #0088ff; 
+}
+.second-column h3:hover{
+    color: #0088ff; 
+}
+.second-column{
+    margin-top: 25px;
+}
+.second-column div{
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid rgb(206, 206, 206);
+    height: 106px;
+    width: 490px;
+}
 </style>
 </head>
 <body>
-<div class ="bodywrapper"></div>
+<div class ="bodywrapper">
 <!-- Navbar -->
 <div class="navbar">
     <!-- Logo -->
-    <img src="./new-pw-logo-white-618259573a0604d3ae593b46213e2ab390bcc33336d4bdc3486405c7351ded13.svg" alt="PakWheels Logo">
+    <img src="./images/Logo.svg" alt="PakWheels Logo">
 
     <!-- Tabs -->
     <div class="nav-links">
-        <a href="#" class="nav-item">Used Cars</a>
+        <a href="./used cars.html" class="nav-item">Used Cars</a>
         <a href="#" class="nav-item">New Cars</a>
         <a href="#" class="nav-item">Bikes</a>
         <a href="#" class="nav-item">Auto Store</a>
@@ -307,41 +398,122 @@
 </svg></button>
     </div>
 </div>
-<!-- SELL SECTION (centered) -->
-  <div class="sell-wrap">
-    <div class="sell-title">Sell Your Car on PakWheels and Get the Best Price</div>
+<div class="section-container">
+    <h2>Sell Your Car on PakWheels and Get the Best Price</h2>
 
-    <div class="sell-card" role="region" aria-label="Sell options">
-      <!-- Left -->
-      <div class="option">
+    <div class="cards">
+      <!-- Left Card -->
+      <div class="card">
         <h3>Sell It Myself!</h3>
-        <ul class="feature-list">
-          <li><span class="tick">✔</span><span>Post an ad in 2 minutes</span></li>
-          <li><span class="tick">✔</span><span>20 million users</span></li>
-          <li><span class="tick">✔</span><span>Connect directly with buyers</span></li>
+        <ul>
+          <li>Post an ad in 2 minutes</li>
+          <li>20 million users</li>
+          <li>Connect directly with buyers</li>
         </ul>
         <button class="btn-red">Post Your Ad</button>
       </div>
 
-      <!-- Divider with OR circle -->
-      <div class="divider-area" aria-hidden="true">
-        <div class="divider-line"></div>
-        <div class="or-circle">OR</div>
-      </div>
+      <!-- Divider -->
+      <div class="divider">OR</div>
 
-      <!-- Right -->
-      <div class="option">
+      <!-- Right Card -->
+      <div class="card">
         <h3>Sell It For Me</h3>
-        <ul class="feature-list">
-          <li><span class="tick">✔</span><span>Sell your car without hassle</span></li>
-          <li><span class="tick">✔</span><span>Free Inspection &amp; Featured ad</span></li>
-          <li><span class="tick">✔</span><span>Maximize offer with sales agent</span></li>
+        <ul>
+          <li>Sell your car without hassle</li>
+          <li>Free Inspection & Featured ad</li>
+          <li>Maximize offer with sales agent</li>
         </ul>
         <button class="btn-blue">Help Me Sell My Car!</button>
       </div>
     </div>
   </div>
+    <div class="first-img">
+    <img src="./images/18358204047996557581.jpeg" alt="">
+    </div>
+    <div class="buc">
+        <span><h1>Browse Used Cars</h1></span>
+    
+    <div class="buc-tabs">
+        <div><button>Category</button></div>
+        <div><button>City</button></div>
+        <div><button>Make</button></div>
+        <div><button>Model</button></div>
+        <div><button>Budget</button></div>
+        <div><button>Body Type</button></div>
+    </div>
+    <div class="c-type-row1">
+        <div class="type">Automatic Cars</div>
+        <div class="type">Imported Cars</div>
+        <div class="type">5 Door</div>
+        <div class="type">4 Door</div>
+        <div class="type">Jeep</div>
+        <div class="type">Hyprid cars</div>
+    </div>
+    <div class="ark2">◀</div>
+    <div class="ark1">▶</div><br>
+    <div class="c-type-row2">
+        <div class="type">Diesel Cars</div>
+        <div class="type">2 Door</div>
+        <div class="type">3 Door</div>
+        <div class="type">1000cc cars</div>
+        <div class="type">Small cars</div>
+        <div class="type">Superdari</div>
+    </div> 
+    </div>
+    <section>
+        
+        <div class="PK-offering">
+            <div class="first-column"> 
+                <h2>PakWheels Offerings</h2>
+             <div>
+                <h3>Pak wheels</h3>
+                <span><p>SELL IT FRO ME</p></span>
+            </div>
+            <div>
+                    <h3>Pak wheels</h3>
+                    <span><p>CAR INSPECTION</p></span>
+            </div>
+            <div>
+                    <h3>Pak wheels</h3>
+                    <span><p>CAR FINANCE</p></span>
+            </div>
+            <div>
+                    <h3>Pak wheels</h3>
+                    <span><p>OWNERSHIP TRANSFER</p></span>
+            </div>           
+            </div>
+            <div class="second-column">
+            <div><h3>Pak wheels</h3>
+                  <span><p>AUCTION SHEET VERIFICATION</p></span>
+            </div>
+            <div>
+                    <h3>Pak wheels</h3>
+                    <span><p>CAR INSURANCE</p></span>
+            </div>
+            <div>
+                    <h3>Pak wheels</h3>
+                    <span><p>CAR REGISTERATION</p></span>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="MB-PK">
+            <span><h2>Managed by PakWheels</h2></span>
+            <p>View all managed by PakWheels Cars</p>
+            <div class="MBPK">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
 
+
+
+    </section>
+</div>
 
 </body>
 </html>
