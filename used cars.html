@@ -124,6 +124,66 @@
     height: 250px;
     border: 1px solid #e0e0e0 ;
 }
+ .buc{
+        box-sizing: border-box;
+        padding: 30px 150px;
+        background-color: #e0e0e0;
+    }
+    .buc-tabs{
+        display: flex;
+        border-bottom:1px solid gray;
+    }
+    .buc-tabs div{
+    padding: 30px ;
+}
+.buc-tabs button{
+    font-size: 20px;
+    background: #ccc;
+    border: none;
+}
+.buc-tabs button:hover{
+    font-weight: bolder;
+    
+}
+.c-type-row1{
+    display: flex;
+    box-sizing: border-box;
+}
+.c-type-row1 div{
+    font-size: 20px;
+    margin: 20px;
+    padding: 30px;
+    border: 1px solid gray;
+    background-color: aliceblue;
+    height:100px ;
+    width:400px;
+    border-radius: 5px;
+
+}
+.c-type-row1 div:hover{
+    font-weight: bolder;
+    box-shadow:  3px 3px 10px #333;
+}
+.c-type-row2{
+    display: flex;
+    box-sizing: border-box;
+}
+.c-type-row2 div{
+    font-size: 20px;
+    margin: 20px;
+    padding: 30px;
+    border: 1px solid gray;
+    background-color: aliceblue;
+    height:100px ;
+    width:400px;
+    border-radius: 5px;
+    
+
+}
+.c-type-row2 div:hover{
+    font-weight: bolder;
+    box-shadow:  3px 3px 10px #333;
+}
     .footer{
     padding:30px;
     background-color: #333;
@@ -148,6 +208,23 @@
 
 .Newsteller button:hover{ 
     background-color: #034918;
+    }
+    .car-inspection{
+        display: flex;
+        margin: 40px;
+    }
+    .car-inspection div{
+        padding: 40px;
+    }
+    .car-inspection button{
+        border-radius: 40px;
+        border: none;
+        color: aliceblue;
+        font-weight: bolder;
+        background: linear-gradient(to right,#2f9921,#0de04d);
+    }
+    .car-inspection button:hover{
+        background: #06fd1a;
     }
     </style>
 </head>
@@ -205,7 +282,47 @@
                 
             </div>
     </section>
-    <section></section>
+    <br><br>
+    <section><div class="buc">
+        <span><h1>Browse Used Cars</h1></span>
+    
+    <div class="buc-tabs">
+        <div><button>Category</button></div>
+        <div><button>City</button></div>
+        <div><button>Make</button></div>
+        <div><button>Model</button></div>
+        <div><button>Budget</button></div>
+        <div><button>Body Type</button></div>
+    </div>
+    <div class="c-type-row1">
+        <div class="type">Automatic Cars</div>
+        <div class="type">Imported Cars</div>
+        <div class="type">5 Door</div>
+        <div class="type">4 Door</div>
+        <div class="type">Jeep</div>
+        <div class="type">Hyprid cars</div>
+    </div>
+    <div class="c-type-row2">
+        <div class="type">Diesel Cars</div>
+        <div class="type">2 Door</div>
+        <div class="type">3 Door</div>
+        <div class="type">1000cc cars</div>
+        <div class="type">Small cars</div>
+        <div class="type">Superdari</div>
+    </div>    
+</section>
+<section>
+        <div class="car-inspection">
+            <div>
+                <p style="font-size: 20px;">Never buy a used car without</p>
+                <h4 style="color: red; font-size: 20px;">PakWheels <span style="color: blue;">Car Inspection</span></h4><br>
+                <p style="font-size: 20px;">Inspect the car on 200+ checkpoints</p>
+                <p style="font-size: 20px;">✔Engine ✔Suspension ✔Exterior ✔Interior </p><br><br>
+                <button style="height: 50px; width: 210px;">Schedule Inspection</button>
+            </div>
+            <div style="margin-left: 80px;"><img src="./images/inspection-car.png" alt=""></div>
+        </div>
+    </section>
 <section class="footer">
 <div>
     <div class=" first-row">
@@ -324,6 +441,7 @@
     </div>
     </div>
     </section>
+    
 </div>
     
 </body>
